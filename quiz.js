@@ -93,10 +93,15 @@ const option = (index) => {
         option3.style.backgroundColor = "red";
         option4.style.backgroundColor = "red";
         });
-
+   
       option2.addEventListener("click", function(){
         pointScore.innerHTML = Number(pointScore.innerHTML) + 1; 
       })
 
-    }
+
+     
+    option3.addEventListener("click", function(){
+        pointScore.innerHTML = Number(pointScore.innerHTML) - 1; 
+    })
+};
    
