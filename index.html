@@ -57,13 +57,20 @@
         <p class="questionHead">Question</p>
         <p class="questionNumber"></p>
     </div>
+
+    <div class="scoreBox">
+        <p class="point">Points:</p>
+        <p class="pointScore"></p>  
+    </div>
+
     <p class="question"></p>
     <div class="options">
-        <p class="option1">1</p>
-        <p class="option2">2</p>
-        <p class="option3">3</p>
-        <p class="option4">4</p>
+        <p class="option1" onclick="option(0)">1</p>
+        <p class="option2" onclick="option(1)">2</p>
+        <p class="option3" onclick="option(2)">3</p>
+        <p class="option4" onclick="option(3)">4</p>
     </div>
+     
     <button class="submitbtn" onclick="submitbtn()">Next</button>
 </div>
 </section>

@@ -18,19 +18,85 @@ function interest(){
     }else{
         quizSection.style.display = "block";
     } 
-
-    var questionNumber = document.querySelector(".questionNumber");
-    questionNumber.innerHTML = " " + 1;
-    var question = document.querySelector(".question");
-   question.innerHTML = "Who is the APC Chairman that has just been suspended ?"
-
-   var option1 = document.querySelector(".option1");
-      option1.innerHTML = "Babatunde Fashola";
-   var option2 = document.querySelector(".option2");
-   option2.innerHTML = "Izeiyamu";
-   var option3 = document.querySelector(".option3");
-   option3.innerHTML = "Oshiomole";
-   var option4 = document.querySelector(".option4");
-   option4.innerHTML = "Answer it yourself";
-    
+      questions();
 }
+/*Getting hold of elements in Quiz Section */
+
+var questionNumber = document.querySelector(".questionNumber");
+var question = document.querySelector(".question");
+var option1 = document.querySelector(".option1");
+var option2 = document.querySelector(".option2");
+var option3 = document.querySelector(".option3");
+var option4 = document.querySelector(".option4");
+var pointScore = document.querySelector(".pointScore");
+
+
+var options = document.querySelector(".options");
+
+
+function questions(){
+    
+    questionNumber.innerHTML = " " + 1;
+    
+   question.innerHTML = "Who is the APC Chairman that has just been suspended ?"
+  
+   option1.innerHTML = "Babatunde Fashola";
+
+   option2.innerHTML = "Izeiyamu";
+  
+   option3.innerHTML = "Oshiomole";
+   
+   option4.innerHTML = "Answer it yourself";
+
+   
+   
+}
+
+
+const option = (index) => {
+    if (index === 2){
+        pointScore.innerHTML = Number(pointScore.innerHTML) + 1; 
+        option1.style.backgroundColor = "red";
+        option2.style.backgroundColor = "red";
+        option3.style.backgroundColor = "green";
+        option4.style.backgroundColor = "red";
+    }else{
+        option1.style.backgroundColor = "red";
+        option2.style.backgroundColor = "red";
+        option3.style.backgroundColor = "green";
+        option4.style.backgroundColor = "red";
+    }
+
+    }
+    function submitbtn(){
+
+   questionNumber.innerHTML = " " + 2;
+    
+   question.innerHTML = "Who is Tekashi SixNine?"
+  
+   option1.innerHTML = "Boo Harry";
+
+   option2.innerHTML = "American Musician";
+  
+   option3.innerHTML = "Nicki Minaj's Hubby";
+   
+   option4.innerHTML = "I don't Snitch";
+   /*Back to default color*/
+        option1.style.backgroundColor = "#0080ff";
+        option2.style.backgroundColor = "#0080ff";
+        option3.style.backgroundColor = "#0080ff";
+        option4.style.backgroundColor = "#0080ff";
+    /* Right colors for question 2 */
+        options.addEventListener("click", function(){ 
+        option1.style.backgroundColor = "red";
+        option2.style.backgroundColor = "green";
+        option3.style.backgroundColor = "red";
+        option4.style.backgroundColor = "red";
+        });
+
+      option2.addEventListener("click", function(){
+        pointScore.innerHTML = Number(pointScore.innerHTML) + 1; 
+      })
+
+    }
+   
