@@ -12,13 +12,13 @@ function EntryBtn(){
     }
 }
 
-function interest(){
+function startQuiz(){
     if(quizSection.style.display === "block"){
         quizSection.style.display = "none";
     }else{
         quizSection.style.display = "block";
     } 
-      questions();
+      questionOne();
 }
 /*Getting hold of elements in Quiz Section */
 
@@ -34,7 +34,7 @@ var pointScore = document.querySelector(".pointScore");
 var options = document.querySelector(".options");
 
 
-function questions(){
+function questionOne(){
     
     questionNumber.innerHTML = " " + 1;
     
@@ -48,7 +48,6 @@ function questions(){
    
    option4.innerHTML = "Answer it yourself";
 
-   
    
 }
 
@@ -70,6 +69,19 @@ const option = (index) => {
     }
     function submitbtn(){
 
+
+
+
+         /*Back to default color*/
+         option1.style.backgroundColor = "#0080ff";
+         option2.style.backgroundColor = "#0080ff";
+         option3.style.backgroundColor = "#0080ff";
+         option4.style.backgroundColor = "#0080ff";
+
+
+
+
+
    questionNumber.innerHTML = " " + 2;
     
    question.innerHTML = "Who is Tekashi SixNine?"
@@ -81,11 +93,7 @@ const option = (index) => {
    option3.innerHTML = "Nicki Minaj's Hubby";
    
    option4.innerHTML = "I don't Snitch";
-   /*Back to default color*/
-        option1.style.backgroundColor = "#0080ff";
-        option2.style.backgroundColor = "#0080ff";
-        option3.style.backgroundColor = "#0080ff";
-        option4.style.backgroundColor = "#0080ff";
+  
     /* Right colors for question 2 */
         options.addEventListener("click", function(){ 
         option1.style.backgroundColor = "red";
@@ -94,14 +102,22 @@ const option = (index) => {
         option4.style.backgroundColor = "red";
         });
    
-      option2.addEventListener("click", function(){
+        option2.addEventListener("click", function(){
         pointScore.innerHTML = Number(pointScore.innerHTML) + 1; 
       })
 
 
      
-    option3.addEventListener("click", function(){
+       option3.addEventListener("click", function(){
         pointScore.innerHTML = Number(pointScore.innerHTML) - 1; 
     })
+
+
+
+
+
+
+
+
 };
    
