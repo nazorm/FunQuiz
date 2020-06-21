@@ -19,7 +19,7 @@
     font-weight: 600;
     margin-bottom: 25px;
 }
-.avatar, .entryPageBtn, .interestPageBtn, .submitbtn{
+.avatar, .entryPageBtn, .interestPageBtn, .prevbtn, .nextbtn{
     padding: 10px 15px;
     font-size: 15px;
     border-radius: 5px;
@@ -67,7 +67,7 @@
     padding:  10px 15px ;
     margin: 0;
 }
-.interestPageBtn, .submitbtn{
+.interestPageBtn, .prevbtn, .nextbtn{
     background-color: teal;
     color: honeydew;;
 }
@@ -148,12 +148,12 @@
         justify-content: center;
         margin: 35px 0 45px;
     }
-    .avatar, .entryPageBtn, .interestPageBtn, .submitbtn{
+    .avatar, .entryPageBtn, .interestPageBtn, .prevbtn, .nextbtn{
         padding: 15px 20px;
         font-size: 20px;
         
     }
-    .entryPageBtn:hover, .interestPageBtn:hover, .interest:hover, .submitbtn:hover{
+    .entryPageBtn:hover, .interestPageBtn:hover, .interest:hover, .prevbtn:hover, .nextbtn:hover{
         cursor: pointer;
         text-decoration: underline;
     }
