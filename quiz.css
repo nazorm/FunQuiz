@@ -12,7 +12,7 @@
     text-align: center;
     height: 100vh;
 }
-.entryPage h1, .UserAvater{
+.entryPage h1, .UserAvater, .text{
     font-family: 'Roboto', sans-serif;
     color: honeydew;;
     font-size: 35px;
@@ -35,7 +35,7 @@
 .interestHead{
     font-size: 18px;
 }
-.interestSection{
+.interestSection, .finalPage{
     display: none;      
 }
 .interestPage, .quiz{
@@ -125,6 +125,12 @@
     border: transparent;
     border-radius: 20px;
 
+}
+.lastPage{
+    display: block;
+    background-color: #0080ff;
+    text-align: center;
+    height: 100vh;
 }
 
 /*Desktop Styles*/

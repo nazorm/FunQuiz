@@ -1,6 +1,7 @@
 var a = document.querySelector(".interestSection");
 var b = document.querySelector(".avatar");
 var quizSection = document.querySelector(".quizSection");
+var lastPage = document.querySelector(".finalPage");
 
 function EntryBtn() {
   var userName = document.querySelector(".UserAvater");
@@ -55,7 +56,7 @@ var questions = [
   },
   {
     question: "what is the loudest animal on Earth?",
-    options: ["Elephant", "Sperm Whale", "Rhinoseros", "Hyena"],
+    options: ["Elephant", "Sperm Whale", "Rhinoceros", "Hyena"],
     answer: 1
   },
   {
@@ -109,9 +110,9 @@ function updateQuestion() {
 function handleNextbtn() {
   currentQuestion += 1;
 
-  if (currentQuestion === 10) {
-    alert(`your score is ${point}`);
-    
+  if (currentQuestion >= questions.length) {
+    alert(`your score is ${point}`);  
+    return;
   }
 
   updateQuestion();
@@ -119,8 +120,9 @@ function handleNextbtn() {
 
 function handlePrevbtn() {
   currentQuestion -= 1;
-  if (currentQuestion === 0) {
+  if (currentQuestion <= 0) {
     alert("first question");
+    return;
     
   }
   updateQuestion();
