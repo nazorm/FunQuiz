@@ -56,6 +56,16 @@
     justify-content: center;
     margin: 15px 0 25px;
 }
+.interestEdu, .interestFash, .interestArt{
+    grid-column: 1/2;
+}
+.interestPol, .interestFin, .interestFood{
+    grid-column: 3/-1;
+}
+.interestEnt, .interestSci{
+    grid-column: 2/3;
+}
+
 .interest{
     border: transparent;
     border-radius: 20px;
@@ -148,7 +158,7 @@
     }
     .interests{
         display: grid;
-        grid-template-columns: repeat(5, 150px);
+        grid-template-columns: repeat(3, 150px);
         grid-template-rows: repeat(5, 40px);
         grid-gap: 25px;
         justify-content: center;
