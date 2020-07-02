@@ -372,56 +372,56 @@ function goToFash() {
 function goToFin() {
   questions = [
     {
-      question: "finance many classes of food are there?",
-      options: ["gown", "skirt", "top", "shirt"],
+      question: "The 'D' in EBITDA means?",
+      options: ["Debit", "Depreciation", "Document", "Deposit"],
+      answer: 1,
+    },
+
+    {
+      question: "Equity also means?",
+      options: ["Net Bonds", "Net Stock", "Net Assets", "Net Liabilities"],
       answer: 2,
     },
-
     {
-      question: "equity is the center of the earth located?",
-      options: ["Ethiopia", "Tanzania", "America", "Turkey"],
-      answer: 3,
-    },
-    {
-      question: "risk is the center of the earth located?",
-      options: ["Ethiopia", "Tanzania", "America", "Turkey"],
-      answer: 3,
+      question: "Which of these is not a type of risk?",
+      options: ["Debit risk", "Credit risk", "Interest risk", "Liquidity risk"],
+      answer: 0,
     },
 
     {
-      question: "consultancy is the center of the earth located?",
-      options: ["Ethiopia", "Tanzania", "America", "Turkey"],
+      question: "Which of these is not a big 4?",
+      options: ["EY", "Deloitte", "KPMG", "Mckensey"],
       answer: 3,
     },
     {
-      question: "forbes is the center of the earth located?",
-      options: ["Ethiopia", "Tanzania", "America", "Turkey"],
+      question: "Which of these is not an Asset?",
+      options: ["Stock", "Incventory", "Car", "House"],
+      answer: 2,
+    },
+    {
+      question: "Which of these is not a way to calculate GDP?",
+      options: ["Expenditure", "Production", "Income", "Natural resource"],
       answer: 3,
     },
     {
-      question: "baml is the center of the earth located?",
-      options: ["Ethiopia", "Tanzania", "America", "Turkey"],
-      answer: 3,
+      question: "Which of these is not a phase of Audit?",
+      options: ["Research", "Report", "Planning", "Follow Up"], 
+      answer: 0,
     },
     {
-      question: "penny is the center of the earth located?",
-      options: ["Ethiopia", "Tanzania", "America", "Turkey"],
-      answer: 3,
+      question: "Which of these is not a type of Merger and Acquisition?",
+      options: ["Horizontal", "Perpendicular", "Vertical","Concentric"],
+      answer: 1,
     },
     {
-      question: "mortgage is the center of the earth located?",
-      options: ["Ethiopia", "Tanzania", "America", "Turkey"],
-      answer: 3,
+      question: "Where is wall street?",
+      options: ["Newyork", "Washington DC", "Birmingham", "Turkey"],
+      answer: 0,
     },
     {
-      question: "audit is the center of the earth located?",
-      options: ["Ethiopia", "Tanzania", "America", "Turkey"],
-      answer: 3,
-    },
-    {
-      question: "merger is the center of the earth located?",
-      options: ["Ethiopia", "Tanzania", "America", "Turkey"],
-      answer: 3,
+      question: "Who is the richest banker in the world?",
+      options: ["Nathaniel Rothschild", "Gorge Lemann", "Joseph Safra", "James Lee"],
+      answer: 1,
     },
   ];
   startQuiz();

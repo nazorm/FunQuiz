@@ -82,6 +82,9 @@
     padding:  10px 15px ;
     margin: 0;
 }
+.interestEnt{
+    padding:10px 50px 10px 0 ;
+}
 .interestPageBtn, .prevbtn, .nextbtn{
     background-color: teal;
     color: honeydew;;
@@ -172,7 +175,9 @@
         padding-top: 20%;
         width: 100%;
         text-align: center;
-
+    }
+    .interestEnt{
+        padding:10px 15px ;
     }
     .interests{
         display: grid;
