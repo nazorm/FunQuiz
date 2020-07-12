@@ -1,79 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
-    <link rel="stylesheet" href="./quiz.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
-</head>
-<body>
+    <link rel="stylesheet" href="./quiz.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <section class="container">
-    <section class="entryPage">
-        <h1> Welcome </h1>
-       <input type="text" placeholder="Enter your name" class="avatar"> <br>
-       <a href="javascript:void(0);" class="entryPageBtn" onclick="entryBtn()">Enter</a>
-       <!-----<button class="entryPageBtn">Enter</button>---->
-    </section>
+      <section class="entryPage">
+        <h1>Welcome</h1>
+        <input type="text" placeholder="Enter your name" class="avatar" />
+        <br />
+        <a href="javascript:void(0);" class="entryPageBtn" onclick="entryBtn()"
+          >Enter</a
+        >
+        <!-----<button class="entryPageBtn">Enter</button>---->
+      </section>
 
-    <section class="interestSection">
+      <section class="interestSection">
         <div class="interestPage">
-        <div class="userName">
+          <div class="userName">
             <h2 class="UserAvater"></h2>
+          </div>
+          <h3 class="interestHead">Pick your interests</h3>
+          <div class="interests">
+            <button class="interest interestEdu" onclick="goToEdu()">
+              Education
+            </button>
+            <button class="interest interestPol" onclick="goToPol()">
+              Politics
+            </button>
+            <button class="interest interestEnt" onclick="goToEnt()">
+              Entertainment
+            </button>
+            <button class="interest interestFash" onclick="goToFash()">
+              Fashion
+            </button>
+            <button class="interest interestFin" onclick="goToFin()">
+              Finance
+            </button>
+            <button class="interest interestSci" onclick="goTosci()">
+              Science
+            </button>
+            <button class="interest interestArt" onclick="goToArt()">
+              Art
+            </button>
+            <button class="interest interestFood" onclick="goToFood()">
+              Food
+            </button>
+          </div>
+          <a
+            href="javascript:void(0);"
+            class="interestPageBtn"
+            onclick="startQuiz()"
+            >Start Quiz</a
+          >
         </div>
-        <h3 class="interestHead">Pick your interests</h3>
-        <div class="interests">
-            <button class="interest interestEdu " onclick="goToEdu()">Education</button>
-            <button class="interest interestPol " onclick="goToPol()">Politics</button>
-            <button class="interest interestEnt " onclick="goToEnt()">Entertainment</button>
-            <button class="interest interestFash " onclick="goToFash()">Fashion</button>
-            <button class="interest interestFin " onclick="goToFin()">Finance</button>
-            <button class="interest interestSci " onclick="goTosci()" >Science</button>
-            <button class="interest interestArt" onclick="goToArt()">Art</button>
-            <button class="interest interestFood" onclick="goToFood()">Food</button>
-           
-           
+      </section>
+      <section class="quizSection">
+        <div class="quiz">
+          <div class="quizHead">
+            <p class="questionHead">Question</p>
+            <p class="questionNumber"></p>
+          </div>
+
+          <div class="scoreBox">
+            <p class="point">Points:</p>
+            <p class="pointScore"></p>
+          </div>
+
+          <p class="question"></p>
+          <div class="options">
+            <button class="option1" onclick="option(0)">1</button>
+            <button class="option2" onclick="option(1)">2</button>
+            <button class="option3" onclick="option(2)">3</button>
+            <button class="option4" onclick="option(3)">4</button>
+          </div>
+
+          <div class="controlBtns">
+            <button class="prevbtn" onclick="handlePrevbtn()">Prev</button>
+            <button class="nextbtn" onclick="handleNextbtn()">Next</button>
+          </div>
         </div>
-        <a href="javascript:void(0);" class="interestPageBtn" onclick="startQuiz()" >Start Quiz</a>
-    </div>
-    </section>
-<section class="quizSection">
-<div class="quiz">
-    <div class="quizHead">
-        <p class="questionHead">Question</p>
-        <p class="questionNumber"></p>
-    </div>
+      </section>
 
-    <div class="scoreBox">
-        <p class="point">Points:</p>
-        <p class="pointScore"></p>  
-    </div>
-
-    <p class="question"></p>
-    <div class="options">
-        <button class="option1" onclick="option(0)">1</button>
-        <button class="option2" onclick="option(1)">2</button>
-        <button class="option3" onclick="option(2)">3</button>
-        <button class="option4" onclick="option(3)">4</button>
-    </div>
-
-    <div class="controlBtns">
-    <button class="prevbtn" onclick="handlePrevbtn()">Prev</button>
-    <button class="nextbtn" onclick="handleNextbtn()">Next</button> </div>
-</div>
-</section>
-
-<section class="finalPage">
-    <div class="lastPage">
-        <div>
+      <section class="finalPage">
+        <div class="lastPage">
+          <div>
             <p class="pointEmoji"></p>
-             <button class="playAgain" onclick="playAgain()">Play Again</button>
-        </div>   
-    </div>
-</section> 
-
-
-</section>
-<script src="./quiz.js"></script>
-</body>
+            <button class="playAgain" onclick="playAgain()">Play Again</button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <script src="./quiz.js"></script>
+  </body>
 </html>

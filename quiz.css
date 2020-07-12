@@ -51,6 +51,7 @@
     z-index: 1;
     display: block;
     width: 100%;
+    height: 100vh;
     background-color: whitesmoke;   
 }
 .interests{
@@ -177,7 +178,7 @@
         text-align: center;
     }
     .interestEnt{
-        padding:10px 15px ;
+        padding:10px 15px;
     }
     .interests{
         display: grid;
@@ -192,14 +193,10 @@
         font-size: 20px;
         
     }
-    .entryPageBtn:hover, .interestPageBtn:hover, .interest:hover, .prevbtn:hover, .nextbtn:hover .playAgain:hover{
-        cursor: pointer;
-        text-decoration: underline;
-    }
+    .entryPageBtn:hover, .interestPageBtn:hover, .interest:hover, .prevbtn:hover, .nextbtn:hover, .playAgain:hover,
     .option1:hover, .option2:hover, .option3:hover, .option4:hover, .interest:hover{
         cursor: pointer;
-        text-decoration: underline;
-        color: purple;
+      opacity: 0.8;
     }
 
     .question{ 

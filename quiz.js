@@ -5,6 +5,16 @@ var lastPage = document.querySelector(".finalPage");
 var text = document.querySelector(".pointEmoji");
 var prevbtn = document.querySelector(".prevbtn");
 
+//check if browser supports storage
+if (typeof Storage !== "undefined") {
+  // store
+  window.localStorage.setItem("stored", JSON.stringify(questions));
+  //retrieve
+  quizSection = JSON.parse(window.localStorage.getItem("stored"));
+  //quizSection = window.localStorage.getItem("stored")
+} else {
+  alert("sorry, your browser does not support Web Storage");
+}
 function entryBtn() {
   var userName = document.querySelector(".UserAvater");
   userName.innerHTML = "Hello," + " " + b.value + " " + "😊";
@@ -64,8 +74,8 @@ var questions = [
   },
   {
     question: "How many ribs are in the human body?",
-    options: ["9", "10", "14", "24"],
-    answer: 3,
+    options: ["9", "10", "24", "25"],
+    answer: 2,
   },
   {
     question: "what is the most common colour of toilet paper in France?",
@@ -88,7 +98,7 @@ var questions = [
     answer: 2,
   },
 ];
-
+let array = [];
 let currentQuestion = 0;
 let point = 0;
 pointScore.innerHTML = point;
@@ -122,7 +132,7 @@ function handleNextbtn() {
     } else {
       text.innerHTML = `You got ${point} points 😆`;
     }
-
+    console.log(array);
     return;
   }
   updateQuestion();
@@ -130,6 +140,8 @@ function handleNextbtn() {
 function playAgain() {
   lastPage.style.display = "none";
   quizSection.style.display = "none";
+  pointScore.innerHTML = 0;
+  point = 0;
 }
 
 function handlePrevbtn() {
@@ -145,6 +157,7 @@ const option = (index) => {
   let answer = questions[currentQuestion].answer;
   if (index == answer) {
     point += 1;
+    array.push(answer);
     pointScore.innerHTML = point;
   }
   option1.style.backgroundColor = "red";
@@ -315,7 +328,8 @@ function goToEnt() {
 function goToFash() {
   questions = [
     {
-      question: "What are the long, hanging flaps on the back of a tuxedo jacket?",
+      question:
+        "What are the long, hanging flaps on the back of a tuxedo jacket?",
       options: ["Flaps", "Under collar", "Tails", "Collar roll"],
       answer: 2,
     },
@@ -326,8 +340,14 @@ function goToFash() {
       answer: 2,
     },
     {
-      question: "What does the french fashion term 'pret a porter' translate to in English?",
-      options: ["Trousers(for work)", "Wash and wear", "an evening gown", "Ready to wear"],
+      question:
+        "What does the french fashion term 'pret a porter' translate to in English?",
+      options: [
+        "Trousers(for work)",
+        "Wash and wear",
+        "an evening gown",
+        "Ready to wear",
+      ],
       answer: 3,
     },
 
@@ -337,12 +357,14 @@ function goToFash() {
       answer: 2,
     },
     {
-      question: "What is the name of a brooch or ring with a portrait profile carved in relief?",
+      question:
+        "What is the name of a brooch or ring with a portrait profile carved in relief?",
       options: ["Cravat", "Cameo", "Poncho", "Argyle"],
       answer: 1,
     },
     {
-      question: "What is the name of the dark green precious stone used to make ornaments?",
+      question:
+        "What is the name of the dark green precious stone used to make ornaments?",
       options: ["Jade", "Savile Row", "Cravat", "Culottes"],
       answer: 0,
     },
@@ -352,18 +374,29 @@ function goToFash() {
       answer: 0,
     },
     {
-      question: "What do you call women's knee-length trousers that are cut with full legs to look like skirt?",
+      question:
+        "What do you call women's knee-length trousers that are cut with full legs to look like skirt?",
       options: ["Struts", "Savile Row", "Sporran", "Culottes"],
       answer: 3,
     },
     {
       question: "Which designer is famous for launching the mini skirt?",
-      options: ["John Galliano", "Mary Quant", "Alexander McQueen", "Karl Lagerfeld"],
+      options: [
+        "John Galliano",
+        "Mary Quant",
+        "Alexander McQueen",
+        "Karl Lagerfeld",
+      ],
       answer: 1,
     },
     {
       question: "puho invented the little black dress?",
-      options: ["Coco Chanel", "Christian Dior", "Louis Vuitton", "Alexander McQueen"],
+      options: [
+        "Coco Chanel",
+        "Christian Dior",
+        "Louis Vuitton",
+        "Alexander McQueen",
+      ],
       answer: 0,
     },
   ];
@@ -405,12 +438,12 @@ function goToFin() {
     },
     {
       question: "Which of these is not a phase of Audit?",
-      options: ["Research", "Report", "Planning", "Follow Up"], 
+      options: ["Research", "Report", "Planning", "Follow Up"],
       answer: 0,
     },
     {
       question: "Which of these is not a type of Merger and Acquisition?",
-      options: ["Horizontal", "Perpendicular", "Vertical","Concentric"],
+      options: ["Horizontal", "Perpendicular", "Vertical", "Concentric"],
       answer: 1,
     },
     {
@@ -420,7 +453,12 @@ function goToFin() {
     },
     {
       question: "Who is the richest banker in the world?",
-      options: ["Nathaniel Rothschild", "Gorge Lemann", "Joseph Safra", "James Lee"],
+      options: [
+        "Nathaniel Rothschild",
+        "Gorge Lemann",
+        "Joseph Safra",
+        "James Lee",
+      ],
       answer: 1,
     },
   ];
@@ -448,7 +486,12 @@ function goTosci() {
 
     {
       question: "Which two planets lack moons?",
-      options: ["Neptune and Uranus", "Saturn and Uranus", "Jupiter and Neptune", "Mercury and Venus"],
+      options: [
+        "Neptune and Uranus",
+        "Saturn and Uranus",
+        "Jupiter and Neptune",
+        "Mercury and Venus",
+      ],
       answer: 3,
     },
     {
@@ -458,7 +501,12 @@ function goTosci() {
     },
     {
       question: "What part of a human body is the Mandible?",
-      options: ["Lacrimal bones", "Nasal bones", "Lower jawbone", "Zygomatic bones"],
+      options: [
+        "Lacrimal bones",
+        "Nasal bones",
+        "Lower jawbone",
+        "Zygomatic bones",
+      ],
       answer: 2,
     },
     {
@@ -473,7 +521,12 @@ function goTosci() {
     },
     {
       question: "Decibel is the unit used for?",
-      options: ["Speed of light", "Intensity of heat", "Intensity of sound", "Radio wave frequency"],
+      options: [
+        "Speed of light",
+        "Intensity of heat",
+        "Intensity of sound",
+        "Radio wave frequency",
+      ],
       answer: 2,
     },
     {
